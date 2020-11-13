@@ -25,7 +25,7 @@
                 <input type="password" name="password_confirmation" class="form-control" placeholder="Nhập lại mật khẩu">
             </div>
             <div class="my-3">
-                <a href="/login?controller=User&action=getUser">Đã có tài khoản?</a>
+                <a href="/login?controller=User&action=login">Đã có tài khoản?</a>
             </div>
             <button type="submit" class="btn btn-primary">Đăng ký</button>
         </form>

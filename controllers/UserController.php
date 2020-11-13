@@ -22,8 +22,7 @@ class UserController
                 $_SESSION['email'] = $user->email;
                 $_SESSION['user_id'] = $user->user_id;
                 $_SESSION['role'] = $user->role;
-                echo "Login";
-                $url = "http://login.test/dashboard?controller=Dashboard&action=index";
+                $url = ROOT . "dashboard?controller=Dashboard&action=index";
                 header("Location: " . $url);
             } else {
                 echo "<div class='mt-3' style='text-align: center;'>Sai tên đăng nhập hoặc mật khẩu</div>";
@@ -32,6 +31,35 @@ class UserController
             }
         } else {
             require_once('views/Login.php');
+        }
+    }
+
+    public function loginWithFacebook()
+    {
+        session_start();
+        $userId = isset($_GET['user']) ? $_GET['user'] : '';
+
+        if ($userId === '') {
+            return "Error";
+        }
+
+        $userModel = new UserModel();
+
+        $user = $userModel->register((string)$userId, (string)$userId);   // tra ve 0 neu da ton tai, neu chua ton tai thi them moi va tra ve user
+
+        if ($user) {
+            // Neu chua ton tai roi
+            $_SESSION['email'] = $user->email;
+            $_SESSION['user_id'] = $user->user_id;
+            $_SESSION['role'] = $user->role;
+            echo 1;
+        } else {
+            // Neu da ton tai
+            $user = $userModel->login((string)$userId, (string)$userId);
+            $_SESSION['email'] = $user->email;
+            $_SESSION['user_id'] = $user->user_id;
+            $_SESSION['role'] = $user->role;
+            echo 0 . $_SESSION['email'] . $_SESSION['user_id'];
         }
     }
 
@@ -60,7 +88,7 @@ class UserController
         unset($_SESSION['email']);
         unset($_SESSION['user_id']);
         unset($_SESSION['role']);
-        header("Location: http://login.test/");
+        header("Location: " . ROOT);
     }
 
 }

@@ -1,33 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="974f6383-e2df-429f-97c5-e6461e74d679" name="Default Changelist" comment="" />
+    <list default="true" id="974f6383-e2df-429f-97c5-e6461e74d679" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Facebook/Authentication/AccessToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Authentication/AccessTokenMetadata.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Authentication/OAuth2Client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookAuthenticationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookAuthorizationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookClientException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookOtherException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookResponseException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookResumableUploadException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookSDKException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookServerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Exceptions/FacebookThrottleException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Facebook.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FacebookApp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FacebookBatchRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FacebookBatchResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FacebookClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FacebookRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FacebookResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FileUpload/FacebookFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FileUpload/FacebookResumableUploader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FileUpload/FacebookTransferChunk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FileUpload/FacebookVideo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/FileUpload/Mimetypes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/Birthday.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/Collection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphAchievement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphAlbum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphCoverPhoto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphEdge.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphLocation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphNode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphNodeFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphObject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphObjectFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphPage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphPicture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphSessionInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/GraphNodes/GraphUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Helpers/FacebookCanvasHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Helpers/FacebookJavaScriptHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Helpers/FacebookPageTabHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Helpers/FacebookRedirectLoginHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Helpers/FacebookSignedRequestFromInputHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Http/GraphRawResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Http/RequestBodyInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Http/RequestBodyMultipart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Http/RequestBodyUrlEncoded.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/FacebookCurl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/FacebookCurlHttpClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/FacebookGuzzleHttpClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/FacebookHttpClientInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/FacebookStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/FacebookStreamHttpClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/HttpClientsFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/HttpClients/certs/DigiCertHighAssuranceEVRootCA.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PersistentData/FacebookMemoryPersistentDataHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PersistentData/FacebookSessionPersistentDataHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PersistentData/PersistentDataFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PersistentData/PersistentDataInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/McryptPseudoRandomStringGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/OpenSslPseudoRandomStringGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/PseudoRandomStringGeneratorFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/PseudoRandomStringGeneratorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/PseudoRandomStringGeneratorTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/RandomBytesPseudoRandomStringGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/PseudoRandomString/UrandomPseudoRandomStringGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/SignedRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Url/FacebookUrlDetectionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Url/FacebookUrlManipulator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/Url/UrlDetectionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Facebook/polyfills.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facebook.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Auth/Logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Auth/Oauth2Callback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/client_secret.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fb_callback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/fb_callback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/login.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/login.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Permission/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Permission/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Permission/AdminAndCTV.php" beforeDir="false" afterPath="$PROJECT_DIR$/Permission/AdminAndCTV.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Permission/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/Permission/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Permission/CTV.php" beforeDir="false" afterPath="$PROJECT_DIR$/Permission/CTV.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acssets/images/img1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/acssets/images/img1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acssets/images/img2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/acssets/images/img2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acssets/images/img3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/acssets/images/img3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acssets/images/img4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/acssets/images/img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/PermissionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_mvc.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/DbModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/DbModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ProductModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProductModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Dashboard_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Dashboard_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Login_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Permission_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Permission_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Product/AddProduct_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Product/AddProduct_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Product/MemberView.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Product/MemberView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Product/Products_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Product/Products_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Product/UpdateProduct_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Product/UpdateProduct_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Register_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Register_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/UserList_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/UserList_template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/Paginator.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/Paginator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/SearchProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/SearchProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Product/AddProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Product/AddProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Product/MemberView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Product/MemberView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Product/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Product/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Product/UpdateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Product/UpdateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/UserList.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/UserList.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution />
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1k5XfrEjBcw3nEPAREsemF9tkWj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Permission" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="974f6383-e2df-429f-97c5-e6461e74d679" name="Default Changelist" comment="" />
@@ -64,11 +215,29 @@
       <workItem from="1605060687159" duration="1730000" />
       <workItem from="1605062544759" duration="1791000" />
       <workItem from="1605064369400" duration="1791000" />
+      <workItem from="1605148723963" duration="5000" />
+      <workItem from="1605148787809" duration="5000" />
+      <workItem from="1605164577433" duration="9106000" />
+      <workItem from="1605185824442" duration="10308000" />
+      <workItem from="1605229118359" duration="12699000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="124" y="316" width="1397" height="301" key="#SQL_Dialects" timestamp="1604998884040">
@@ -79,14 +248,26 @@
       <screen x="56" y="27" width="1544" height="873" />
     </state>
     <state x="494" y="265" width="657" height="410" key="#com.intellij.fileTypes.FileTypeChooser/56.27.1544.873@56.27.1544.873" timestamp="1605001597526" />
+    <state x="561" y="379" width="523" height="175" key="ComposerInitDialogKey" timestamp="1605233729883">
+      <screen x="56" y="27" width="1544" height="873" />
+    </state>
+    <state x="561" y="379" width="523" height="175" key="ComposerInitDialogKey/56.27.1544.873@56.27.1544.873" timestamp="1605233729883" />
     <state x="611" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604994296812">
       <screen x="56" y="27" width="1544" height="873" />
     </state>
     <state x="611" y="221" width="424" height="491" key="FileChooserDialogImpl/56.27.1544.873@56.27.1544.873" timestamp="1604994296812" />
-    <state x="492" y="207" key="run.anything.popup" timestamp="1605063098116">
+    <state x="317" y="98" width="1022" height="737" key="SettingsEditor" timestamp="1605185844251">
       <screen x="56" y="27" width="1544" height="873" />
     </state>
-    <state x="492" y="207" key="run.anything.popup/56.27.1544.873@56.27.1544.873" timestamp="1605063098116" />
+    <state x="317" y="98" width="1022" height="737" key="SettingsEditor/56.27.1544.873@56.27.1544.873" timestamp="1605185844251" />
+    <state x="484" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1605164580407">
+      <screen x="56" y="27" width="1544" height="873" />
+    </state>
+    <state x="484" y="291" key="com.intellij.ide.util.TipDialog/56.27.1544.873@56.27.1544.873" timestamp="1605164580407" />
+    <state x="492" y="207" key="run.anything.popup" timestamp="1605192838022">
+      <screen x="56" y="27" width="1544" height="873" />
+    </state>
+    <state x="492" y="207" key="run.anything.popup/56.27.1544.873@56.27.1544.873" timestamp="1605192838022" />
     <state x="491" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1605020641285">
       <screen x="56" y="27" width="1544" height="873" />
     </state>

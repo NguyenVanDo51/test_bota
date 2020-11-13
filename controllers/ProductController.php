@@ -37,7 +37,7 @@ class ProductController
 
             $productModel = new ProductModel();
             $products = $productModel->create($title, $description, $img, $price, $_SESSION['user_id']);
-            header("Location: http://login.test/products?controller=Product&action=index");
+            header("Location: " . ROOT . "products?controller=Product&action=index");
         }
     }
 
@@ -48,7 +48,7 @@ class ProductController
         $productModel = new ProductModel();
         $result = $productModel->remove($product_id);
 
-        header("Location: http://login.test/products?controller=Product&action=index");
+        header("Location: " . ROOT . "products?controller=Product&action=index");
     }
 
     public function update()
@@ -79,7 +79,7 @@ class ProductController
 
             $products = $productModel->update($product_id, $title, $description, $img, $price);
             if ($products) {
-                header("Location: http://login.test/products?controller=Product&action=index&page=" . $currentPage);
+                header("Location: " . ROOT . "products?controller=Product&action=index&page=" . $currentPage);
             } else {
                 echo "Đã xảy ra lỗi hoặc không có thông tin được thay dổi, vui lòng kiểm tra lại!";
             }

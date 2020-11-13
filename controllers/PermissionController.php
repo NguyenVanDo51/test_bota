@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 require_once('models/UserModel.php');
 
 class PermissionController
@@ -17,7 +19,7 @@ class PermissionController
                 if ($user === 0) {
                     echo "Có gì đó sai sai, vui lòng thử lại!";
                 } else {
-                    header("Location: http://login.test/users?controller=User&action=index");
+                    header("Location:" . ROOT . "users?controller=User&action=index");
                 }
             }
         }

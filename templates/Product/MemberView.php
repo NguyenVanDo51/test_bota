@@ -13,6 +13,7 @@
     </style>
 </head>
 <body>
+
 <?php require_once ('templates/components/navbar.php')?>
 <div class="mt-5">
     <div class="container">
@@ -39,7 +40,5 @@
         <?php require_once('templates/components/Paginator.php') ?>
     </div>
 </div>
-
-
 </body>
 </html>

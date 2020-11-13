@@ -11,31 +11,32 @@ class UserModel extends DbModel
     {
         $con = $this->connect();
         try {
-            $sql = 'SELECT * FROM `users` WHERE email = "' . $email . '" and password = "' . $password . '" ';
+            $sql = "SELECT * FROM `users` WHERE email = '$email' and password = '$password'";
             $user = $con->query($sql);
             $user->setFetchMode(PDO::FETCH_ASSOC);
             return $user->fetchObject();
         } catch (PDOException $e) {
-            return "Error: " . $e->getMessage();
+            echo "Error: " . $e->getMessage();
         }
 
     }
 
-    public function register($email, $password)
+    public function register($email, $password, $function = null)
     {
         // kiem tra xem ten dang nhap ton tai hay chua
         $con = $this->connect();
         $check = "SELECT * FROM `users` WHERE email ='" . $email . "'";
         $result = $con->query($check);
-        if ($result->rowCount() > 0) {
+        if ($result->rowCount() > 0) {  // Neu da ton tai roi thi tra ve 0
             return 0;
-        } else {
+        } else {  // chua ton tai thi them moi
             try {
-                $query = 'INSERT INTO users (`email`, `password`) VALUES ("' . $email . '", "' . $password . '")';
+                $query = "INSERT INTO users (`email`, `password`, `function`) VALUES ('$email', '$password', '$function' )";
                 $result = $con->exec($query);
                 return $result;
             } catch (PDOException $e) {
-                return "Error: " . $e->getMessage();
+                echo '<br>' . $query;
+                echo "<br>Error while register: " . $e->getMessage();
             }
         }
     }
@@ -52,10 +53,14 @@ class UserModel extends DbModel
             $conn = null;
             return $result->fetchAll();
         } catch (PDOException $e) {
-            return "Error: " . $e->getMessage();
+            echo "Error: " . $e->getMessage();
         }
     }
 
+    /**
+     * @param $id
+     * @return mixed|string
+     */
     public function find($id)
     {
         $conn = $this->connect();
@@ -66,7 +71,7 @@ class UserModel extends DbModel
             $result->setFetchMode(PDO::FETCH_ASSOC);
             return $result->fetchObject();
         } catch (PDOException $e) {
-            return "Error: " . $e->getMessage();
+            echo "Error: " . $e->getMessage();
         }
 
     }
@@ -83,9 +88,31 @@ class UserModel extends DbModel
 
             return $result->rowCount();
         } catch (PDOException $e) {
-            echo "Query: " . $query;
             echo "Error: " . $e->getMessage();
         }
 
     }
+
+//    public function findUserFB($userId)
+//    {
+//        $conn = $this->connect();
+//        try {
+//            $query = "SELECT * FROM `users` WHERE email = $userId";
+//            $result = $conn->query($query);
+//            if ($result->rowCount() > 0) {  // Neu da ton tai
+//                try {
+//                    $query = 'INSERT INTO users (`email`, `password`) VALUES ("' . $email . '", "' . $password . '")';
+//                    $result = $conn->exec($query);
+//                    echo $result;
+//                } catch (PDOException $e) {
+//                    echo "Error: " . $e->getMessage();
+//                }
+//                return 0;
+//            } else {
+//
+//            }
+//        } catch (PDOException $e) {
+//            echo "Error: " . $e->getMessage();
+//        }
+//    }
 }

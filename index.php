@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once ('config/config.php');
 
 $controller = isset($_GET['controller']) ? $_GET['controller'] . 'Controller' : 'ProductController';
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
