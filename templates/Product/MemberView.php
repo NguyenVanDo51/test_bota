@@ -14,11 +14,12 @@
 </head>
 <body>
 
-<?php require_once ('templates/components/navbar.php')?>
+<?php
+require_once('templates/components/navbar.php') ?>
 <div class="mt-5">
     <div class="container">
         <h3>Danh sách sản phẩm:</h3>
-        <?php require_once ('templates/components/SearchProduct.php')?>
+        <?php require_once('templates/components/SearchProduct.php') ?>
         <div class="row">
             <?php
             if (isset($products)) {
@@ -36,9 +37,13 @@
             }
             ?>
         </div>
-
-        <?php require_once('templates/components/Paginator.php') ?>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $.get("https://f652079107e4.ngrok.io/", function (data, status) {
+        console.log(data);
+    })
+</script>
 </body>
 </html>

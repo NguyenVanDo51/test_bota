@@ -32,7 +32,6 @@ class ProductModel extends DbModel
             VALUES ('" . $title . "', '" . $description . "', '" . $img . "', " . $price . ", " . $user_id . ")";
 
         try {
-            var_dump($query);
             $result = $this->conn->exec($query);
 
             $this->conn = null;
@@ -95,7 +94,7 @@ class ProductModel extends DbModel
         // Tim start
         $start = ($currentPage - 1) * $limit;
         $query = "SELECT P.id, P.title, P.description, P.img, P.price, U.email as `email` 
-FROM bota_product as P, users as U WHERE P.user_id=U.user_id";
+FROM bota_product as P, users as U WHERE P.user_id=U.user_id ORDER BY P.id DESC";
 
         if ($orderBy !== '') {
             $query .= " ORDER BY $orderBy $index";
@@ -123,7 +122,7 @@ FROM bota_product as P, users as U WHERE P.user_id=U.user_id";
     public function search($search)
     {
         $query = "SELECT P.id, P.title, P.description, P.img, P.price, U.email as `email` 
-FROM bota_product as P, users as U WHERE P.user_id=U.user_id AND P.title like '%$search%'";
+FROM bota_product as P, users as U WHERE P.user_id=U.user_id AND P.title like '%$search%' LIMIT 10";
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->execute();

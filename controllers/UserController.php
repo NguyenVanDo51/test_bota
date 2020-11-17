@@ -8,13 +8,35 @@ class UserController
         $userModel = new UserModel();
         $userList = $userModel->all();
 
-        require_once('views/UserList.php');
+	echo json_encode([
+	    'status' => 200,
+	    'message' => 'Get users successfully',
+	    'users' => $userList
+	]);
+    }
+
+    public function getUser() {
+	$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : '';
+
+        if ($user_id !== '') {
+            echo json_encode([
+                'status' => 200,
+                'message' => 'You are login',
+                'user_id' => $_SESSION['user_id'],
+                'email' => $_SESSION['email'],
+                'role' => $_SESSION['role']
+            ]);
+        }
+        echo json_encode([
+            'status' => 403,
+            'message' => 'You are not login!'
+        ]);
     }
 
     public function login()
     {
-        $email = isset($_POST['email']) ? $_POST['email'] : '';
-        $password = isset($_POST['password']) ? $_POST['password'] : '';
+        $email = isset($_GET['email']) ? $_GET['email'] : '';
+        $password = isset($_GET['password']) ? $_GET['password'] : '';
         if ($password != '' && $email != '') {
             $usermodel = new UserModel();
             $user = $usermodel->login($email, $password);
@@ -22,15 +44,27 @@ class UserController
                 $_SESSION['email'] = $user->email;
                 $_SESSION['user_id'] = $user->user_id;
                 $_SESSION['role'] = $user->role;
-                $url = ROOT . "dashboard?controller=Dashboard&action=index";
-                header("Location: " . $url);
+                echo json_encode([
+                   'message' => 'successfully',
+                   'status' => 200,
+                    'user' => $user,
+                    'session' => [
+                        'email' => $_SESSION['email'],
+                        'user_id' => $_SESSION['user_id'],
+                        'role' => $_SESSION['role'],
+                    ]
+                ]);
             } else {
-                echo "<div class='mt-3' style='text-align: center;'>Sai tên đăng nhập hoặc mật khẩu</div>";
-                require_once('views/Login.php');
-
+                echo json_encode([
+                    'message' => 'Sai email hoac mat khau',
+		            'status' => 403
+                ]);
             }
         } else {
-            require_once('views/Login.php');
+            echo json_encode([
+                'message' => 'null',
+                'status' => 404
+            ]);
         }
     }
 
@@ -88,7 +122,10 @@ class UserController
         unset($_SESSION['email']);
         unset($_SESSION['user_id']);
         unset($_SESSION['role']);
-        header("Location: " . ROOT);
+        echo json_encode([
+            'message' => 'Đăng xuất thành công!',
+            'status' => 200
+        ]);
     }
 
 }

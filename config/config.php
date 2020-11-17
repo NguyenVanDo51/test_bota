@@ -1,5 +1,5 @@
 <?php
-define("ROOT", "https://75e28309a129.ngrok.io/");
+define("ROOT", "https://ee7613fb6d9a.ngrok.io/");
 
 function getStatusCodeMeeage($status){
     $codes = Array(
@@ -47,9 +47,4 @@ function getStatusCodeMeeage($status){
 );
 
 return (isset($codes[$status])) ? $codes[$status] : "";
-}
-
-function sendResponse($status = 200, $body = "", $content_type = 'text/html')
-{
-    $status_header = 'HTTP/1.1 ' . $status . ' ' . $this
 }
