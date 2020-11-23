@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 11, 2020 at 10:55 AM
+-- Generation Time: Nov 23, 2020 at 07:40 AM
 -- Server version: 8.0.22-0ubuntu0.20.04.2
 -- PHP Version: 7.4.3
 
@@ -41,7 +41,7 @@ CREATE TABLE `bota_product` (
 --
 
 INSERT INTO `bota_product` (`id`, `title`, `description`, `img`, `price`, `user_id`) VALUES
-(8, 'Sản phẩm 5', 'Mô tả sản phẩm 5', 'img4.jpg', 400000, 1),
+(8, 'Sản phẩm 6', 'Mô tả sản phẩm 6', 'img1.jpeg', 400001, 1),
 (10, 'Sản phẩm 7', 'Mô tả sản phẩm 7 ', 'img3.jpeg', 600000, 1),
 (11, 'Sản phẩm 1 ', 'Mô tả sp 1 ', 'img1.jpeg', 111111, 2),
 (12, 'Sản phẩm mới 1', 'mô tả sp mới 1 ', 'img3.jpeg', 500000, 3),
@@ -74,14 +74,9 @@ INSERT INTO `bota_product` (`id`, `title`, `description`, `img`, `price`, `user_
 (39, 'Sản phẩm mẫu 23', 'Mô tả sản phẩm mẫu 23', 'img4.jpg', 400000, 1),
 (40, 'Sản phẩm mẫu 9', 'Mô tả sản phẩm mẫu 9', 'img4.jpg', 340000, 1),
 (41, 'Sản phẩm mẫu 24', 'Mô tả sản phẩm mẫu 24', 'img1.jpeg', 150000, 1),
-(42, 'Sản phẩm mẫu 25', 'Mô tả sản phẩm mẫu 25', 'img3.jpeg', 80000, 1),
-(43, 'Sản phẩm mẫu 26', 'Mô tả sản phẩm mẫu 26', 'img3.jpeg', 1410000, 1),
-(44, 'Sản phẩm mẫu 27', 'Mô tả sản phẩm mẫu 27', 'img4.jpg', 5680000, 1),
-(45, 'Sản phẩm mẫu 28', 'Mô tả sản phẩm mẫu 28', 'img2.jpeg', 3780000, 1),
-(46, 'Sản phẩm mẫu 30', 'Mô tả sản phẩm mẫu 30', 'img2.jpeg', 5110000, 1),
-(47, 'Sản phẩm mẫu 16', 'Mô tả sản phẩm mẫu 16', 'img4.jpg', 520000, 1),
-(48, 'Sản phẩm mẫu 17', 'Mô tả sản phẩm mẫu 17', 'img4.jpg', 540000, 1),
-(49, 'Mới về 1', 'Mô tả  ', 'img3.jpeg', 1000000, 1);
+(65, 'Velit in ut consequa', 'Perspiciatis porro ', 'img1.jpeg', 87, 1),
+(68, 'Perspiciatis culpa', 'Rerum sunt deserunt ', 'img2.jpeg', 2, 1),
+(69, 'Quisquam sed ratione', 'Magnam officia aut a', 'img1.jpeg', 94, 1);
 
 -- --------------------------------------------------------
 
@@ -93,24 +88,28 @@ CREATE TABLE `users` (
   `user_id` int NOT NULL,
   `email` varchar(50) NOT NULL,
   `role` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'Member',
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  `function` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `email`, `role`, `password`) VALUES
-(1, 'user1@gmail.com', 'Admin', 'adminadmin'),
-(2, 'user2@gmail.com', 'CTV', 'adminadmin'),
-(3, 'user3@gmail.com', 'CTV', 'adminadmin'),
-(4, 'user4@gmail.com', 'CTV', 'adminadmin'),
-(5, 'user5@gmail.com', 'CTV', 'adminadmin'),
-(6, 'user6@gmail.com', 'Member', 'a'),
-(7, 'user7@gmail.com', 'Member', 'adminadmin'),
-(8, 'user8@gmail.com', 'Member', 'adminadmin'),
-(15, 'user9@gmail.com', 'Member', 'adminadmin'),
-(16, 'user12@gmail.com', 'Member', 'adminadmin');
+INSERT INTO `users` (`user_id`, `email`, `role`, `password`, `function`) VALUES
+(1, 'user1@gmail.com', 'Admin', 'adminadmin', NULL),
+(2, 'user2@gmail.com', 'CTV', 'adminadmin', NULL),
+(3, 'user3@gmail.com', 'CTV', 'adminadmin', NULL),
+(4, 'user4@gmail.com', 'Member', 'adminadmin', NULL),
+(5, 'user5@gmail.com', 'Member', 'adminadmin', NULL),
+(6, 'user6@gmail.com', 'Member', 'a', NULL),
+(7, 'user7@gmail.com', 'Member', 'adminadmin', NULL),
+(8, 'user8@gmail.com', 'Member', 'adminadmin', NULL),
+(15, 'user9@gmail.com', 'Member', 'adminadmin', NULL),
+(16, 'user12@gmail.com', 'Member', 'adminadmin', NULL),
+(11112234, '886565438818846', 'Member', '886565438818846', NULL),
+(11112242, 'nguyenvando510@gmail.com', 'Member', 'nguyenvando510@gmail.com', 'google'),
+(11112243, 'buihuong20101998@gmail.com', 'Member', 'buihuong20101998@gmail.com', 'google');
 
 --
 -- Indexes for dumped tables
@@ -137,13 +136,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bota_product`
 --
 ALTER TABLE `bota_product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11112244;
 
 --
 -- Constraints for dumped tables
